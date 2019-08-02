@@ -5,9 +5,11 @@ by Michael Xiao
 Class: Data Science Immersive - 8
 
 __Background__
+
 3 months ago, I entered into General Assembly to pursue a Data Science course. As part of my final project, I focused my efforts on Natural Language Processing, Sentiment Analysis and Recommended systems (RecSys). This project is a work in progress as more improvement(s) will be made over time if deemed fit.
 
 __Disclaimers__
+
 Basic knowledge of python and machine learning is highly recommended, lingos included. If you don't understand the above lingos mentioned, please check out these links (I find them awesome!):
 1. [Natural Language Processing](https://www.analyticsvidhya.com/blog/2017/01/ultimate-guide-to-understand-implement-natural-language-processing-codes-in-python/ "NLP")
 2. [VADER](https://medium.com/analytics-vidhya/simplifying-social-media-sentiment-analysis-using-vader-in-python-f9e6ec6fc52f "VADER")
@@ -15,10 +17,12 @@ Basic knowledge of python and machine learning is highly recommended, lingos inc
 4. [Recommended System](https://www.analyticsvidhya.com/blog/2016/06/quick-guide-build-recommendation-engine-python/ "RecSys")
 
 ___Project___
+
 Dataset: Amazon Fine Food Reviews from Kaggle
 link: https://www.kaggle.com/snap/amazon-fine-food-reviews
 
 __Executive Summary__
+
 This project can be split into two parts: Sentiment Analysis and RecSys.
 1. Sentiment Analysis
    - Initial Cleaning and EDA
@@ -66,6 +70,7 @@ We focused on using what users reviewed on Amazon products to find out if this s
 
 
 __Conclusion__
+
 Surprise! package  was used to kick off the start of our RecSys model as to compare RMSE scores for different algorithms. Furthermore, GridSearchCV on Surprise! also allows us to find the best hyper parameters to use for our chosen model. Despite not being the best model for this case, we went ahead with SVD for the purpose of matrix factorisation. Our RMSE score of 0.2120 on our test set suggests that there are room for improvement as this score is considered relatively large for our current dataset. 
 
 The goal for Capstone 2 will be to minimise our RMSE score by adopting the Baseline Only model(best RMSE score throughout). Also, we will explore regularisation methods that may be adopted to our current SVD model, and find ways to get our RMSE scores as low as possible. As for now, we shall focus on our current model and take the best estimates whenever possible. Moving on, our SVD model helped us derive our 'm x m' and 'n x n' matrixes for our RecSys. Our RecSys be sorted to two main features, Score and Product Categories, to display the ideal product(s) for the given RecSys method.
