@@ -28,9 +28,11 @@ This project can be split into two parts: Sentiment Analysis and RecSys.
    - TextBlob Sentiment Analysis
    - Hybrid Score
    - Tackling the Cold-Start Problem
+
 **Data Dictionary**
-|------|-----------|
+
 |Column|Description|
+|------|------|
 |ProductId|Specific product id from a product user bought|
 |UserId|Amazon UserId|
 |hybrid_score|Helpful sentiment reviews score|
@@ -46,9 +48,10 @@ We focused on using what users reviewed on Amazon products to find out if this s
    - Hybrid 
 
 **Data Dictionaries**
-|---|---|
+
 |Column|Description|
-|UserId|Amazon UserId
+|---|---|
+|UserId|Amazon UserId|
 |ProductId|Specific product id from a product user bought|
 |hybrid_score|Helpful sentiment reviews score|
 |product_name|Name of product|
@@ -59,8 +62,8 @@ We focused on using what users reviewed on Amazon products to find out if this s
 |CAT5|5th category of product|
 |CAT6|6th category of product|
 
-[Surprise!](../pictures/Surprise!.jpg)
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
+[Surprise!](../blob/master/pictures/Surprise!.jpg)
+
 
 __Conclusion__
 Surprise! package  was used to kick off the start of our RecSys model as to compare RMSE scores for different algorithms. Furthermore, GridSearchCV on Surprise! also allows us to find the best hyper parameters to use for our chosen model. Despite not being the best model for this case, we went ahead with SVD for the purpose of matrix factorisation. Our RMSE score of 0.2120 on our test set suggests that there are room for improvement as this score is considered relatively large for our current dataset. 
