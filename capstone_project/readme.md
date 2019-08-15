@@ -6,7 +6,7 @@ Class: Data Science Immersive - 8
 
 __Background__
 
-3 months ago, I entered into General Assembly to pursue a Data Science course. As part of my final project, I focused my efforts on Natural Language Processing, Sentiment Analysis and Recommended systems (RecSys). This project is a work in progress as more improvement(s) will be made over time if deemed fit.
+3 months ago, I entered into General Assembly to pursue a Data Science course. As part of my final project, I focused my efforts on Natural Language Processing, Sentiment Analysis and Recommender Systems (RecSys). This project is a work in progress as more improvement(s) will be made over time if deemed fit.
 
 __Disclaimers__
 
@@ -73,16 +73,10 @@ __Conclusion__
 
 Surprise! package  was used to kick off the start of our RecSys model as to compare RMSE scores for different algorithms. Furthermore, GridSearchCV on Surprise! also allows us to find the best hyper parameters to use for our chosen model. Despite not being the best model for this case, we went ahead with SVD for the purpose of matrix factorisation. Our RMSE score of 0.2120 on our test set suggests that there are room for improvement as this score is considered relatively large for our current dataset. 
 
-The goal for Capstone 2 will be to minimise our RMSE score by adopting the Baseline Only model(best RMSE score throughout). Also, we will explore regularisation methods that may be adopted to our current SVD model, and find ways to get our RMSE scores as low as possible. As for now, we shall focus on our current model and take the best estimates whenever possible. Moving on, our SVD model helped us derive our 'm x m' and 'n x n' matrixes for our RecSys. Our RecSys be sorted to two main features, Score and Product Categories, to display the ideal product(s) for the given RecSys method.
+The goal for Capstone 2 will be to minimise our RMSE score by adopting the Baseline Only model(best RMSE score throughout). Also, we will explore regularisation methods that may be adopted to our current SVD model, and find ways to get our RMSE scores as low as possible. As for now, we shall focus on our current model and take the best estimates whenever possible. Moving on, our SVD model helped us derive our 'm x m' and 'n x n' matrixes for our RecSys, which solves our sparsity problem. Our RecSys be sorted to two main features, Score and Product Categories, to display the ideal product(s) for the given RecSys method.
 
-_Content-Based Filtering_
-The content-based filtering RecSys focuses on the cosine similarity between products to recommend other products. The results show that this method may not be ideal as products categories barely match each other. However, we do notice the hybrid_score between product input and products recommended do not wander as far off (taking into account ascending=False, ±0.2).
+_Item Recommender_
+Our item recommender focuses on the cosine similarity between products to recommend other products. The results are then sorted to only recommend products with similar categories and similar hybrid scores. Our recommender works fairly decent.
 
 _Collaborative Filtering_
-One of my personal favourites, our user-based collaborative filtering recommender will recommend a dataframe of products given a 'UserId'. Products recommended are similar in terms of hybrid_scores and sorted to product categories. As such, it is easier to use and more intuitive as well.
-
-We also tried item-based collaborative filtering where we simply transpose our dataframe such that a given 'ProductId' will give us users' predictions.
-
-Next: 
-- Account for category names within function.
-- Collaborative Filtering has yet to incorporate cosine similarity between users.
+Our collaborative filtering recommender will recommend a dataframe of products given a 'UserId'. Products recommended are similar in terms of predicted scores from our SVD model and sorted to product categories. 
