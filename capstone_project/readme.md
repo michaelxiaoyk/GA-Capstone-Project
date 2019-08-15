@@ -10,7 +10,7 @@ __Background__
 
 __Disclaimers__
 
-Basic knowledge of python and machine learning is highly recommended, lingos included. If you don't understand the above lingos mentioned, please check out these links (I find them awesome!):
+Basic knowledge of python and machine learning is highly recommended, lingos included. If you do not understand the above lingos mentioned, please check out these links (I find them awesome!):
 1. [Natural Language Processing](https://www.analyticsvidhya.com/blog/2017/01/ultimate-guide-to-understand-implement-natural-language-processing-codes-in-python/ "NLP")
 2. [VADER](https://medium.com/analytics-vidhya/simplifying-social-media-sentiment-analysis-using-vader-in-python-f9e6ec6fc52f "VADER")
 3. [TextBlob](https://www.analyticsvidhya.com/blog/2018/02/natural-language-processing-for-beginners-using-textblob/ "TextBlob")
@@ -42,6 +42,7 @@ This project can be split into two parts: Sentiment Analysis and RecSys.
 |hybrid_score|Helpful sentiment reviews score|
 
 __Conclusion__
+
 We focused on using what users reviewed on Amazon products to find out if this score differs from the original 'Score' provided in our data. It turns out that the hybrid score has a 0.076272 correlation score when compared against the original 'Score' feature. This suggests that user ratings may not tally with their sentiments of the particular product. Our hybrid score also takes into account whether or not a product is deemed helpful (a fraction ranging from 0.0 to 1.0) to filter out reviews that were not helpful, especially in our analysis. Thereafter, we attempted to run our RecSys based on the hybrid_score attained.
 
 2. RecSys
@@ -60,16 +61,11 @@ We focused on using what users reviewed on Amazon products to find out if this s
 |hybrid_score|Helpful sentiment reviews score|
 |product_name|Name of product|
 |CAT1|Main category of product|
-|CAT2|2nd category of product|
-|CAT3|3rd category of product|
-|CAT4|4th category of product|
-|CAT5|5th category of product|
-|CAT6|6th category of product|
-
-[Surprise!](../blob/master/pictures/Surprise!.jpg)
-
-
-__Conclusion__
+|CAT2|sub-category of product|
+|CAT3|3rd sub-category of product|
+|CAT4|4th sub-category of product|
+|CAT5|5th sub-category of product|
+|CAT6|6th sub-category of product|
 
 Surprise! package  was used to kick off the start of our RecSys model as to compare RMSE scores for different algorithms. Furthermore, GridSearchCV on Surprise! also allows us to find the best hyper parameters to use for our chosen model. Despite not being the best model for this case, we went ahead with SVD for the purpose of matrix factorisation. Our RMSE score of 0.2120 on our test set suggests that there are room for improvement as this score is considered relatively large for our current dataset. 
 
